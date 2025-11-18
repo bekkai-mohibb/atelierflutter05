@@ -5,6 +5,18 @@ class PageAccueil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("Page d'accueil")),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Bienvenue sur la page d'accueil !"),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
