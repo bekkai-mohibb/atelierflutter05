@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; 
 
 class PageProfil extends StatelessWidget {
   const PageProfil({super.key});
@@ -9,9 +9,23 @@ class PageProfil extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("Page Profil")),
         body: Center(
-          child: Text(
-            "Bienvenue sur la page Profil de mohib !",
-            style: TextStyle(fontSize: 22),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Bienvenue sur la page Profil !",
+                style: TextStyle(fontSize: 22),
+              ),
+
+              SizedBox(height: 20),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Page précédente"),
+              ),
+            ],
           ),
         ),
       ),
